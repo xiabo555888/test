@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #addT{
+            margin-left: 10px;
+        }
+        .topBtn{
+            height: 40px;
+            line-height: 40px;
+        }
+       .topBtn, #fenye{
+           width: 80%;
+           margin: 0 auto;
+       }
+    </style>
+    <link rel="stylesheet" href="../util/Bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<section>
+    <table class="table table-striped" style="width: 80%;margin: 0 auto">
+        <caption style="text-align: center">学生管理系统</caption>
+            <div class="topBtn">
+                <button type="button" class="btn btn-primary btn-sm" id="addT"  data-toggle="modal" data-target="#myModal">添加</button>
+                <button type="button" class="btn btn-primary btn-sm" id="reset">恢复</button>
+                <button type="button" class="btn btn-primary btn-sm" id="clear">清空</button>
+            </div>
+        <thead>
+            <th><input type="checkbox" id="checkAll">全选</th>
+            <th>ID</th>
+            <th>卡号</th>
+            <th>密码</th>
+            <th>余额</th>
+            <th>操作</th>
+        </thead>
+
+        <tbody id="table1" >
+        </tbody>
+<!--        分页-->
+
+    </table>
+    <div id="fenye"></div>
+    </section>
+
+
+<!--    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">开始演示模态框<tton>-->
+        <!-- 模态框（Modal） -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+<!--                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;<tton>-->
+                            <h4 class="modal-title" id="myModalLabel">学生信息</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p><span style="color: red">*</span><input type="text" required="required" id="textAddId" placeholder="id号"></p>
+                        <p><span style="color: red">*</span><input type="text" required="required" id="textAddKahao" placeholder="卡号"></p>
+                        <p><span style="color: red">*</span><input type="text" required="required" id="textAddPwd" placeholder="密码号"></p>
+                        <p><span style="color: red">*</span><input type="text" required="required" id="textAddMoney" placeholder="金额"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            <button type="button" class="btn btn-primary addQ" >确认</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+
+
+
+<!--    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">开始演示模态框<tton>-->
+        <!-- 模态框（Modal） -->
+        <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+<!--                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;<tton>-->
+                            <h4 class="modal-title" id="editModalLabel">学生信息</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p><span style="color: red">*</span><input type="text" required="required" id="edittextAddId" placeholder="id号"></p>
+                        <p><span style="color: red">*</span><input type="text" required="required" id="edittextAddKahao" placeholder="卡号"></p>
+                        <p><span style="color: red">*</span><input type="text" required="required" id="edittextAddPwd" placeholder="密码号"></p>
+                        <p><span style="color: red">*</span><input type="text" required="required" id="edittextAddMoney" placeholder="金额"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            <button type="button" class="btn btn-primary editQ" >确认</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+
+    <script src="../util/jQuery/jquery-v3.5.1.js"></script>
+    <script src="../util/Bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/zengshangai.js"></script>
+</body>
+</html>
